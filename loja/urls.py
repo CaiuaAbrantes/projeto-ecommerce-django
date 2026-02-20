@@ -22,6 +22,9 @@ from debug_toolbar.toolbar import debug_toolbar_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),    
+    path('', include('produto.urls')),
+    path('perfil', include('perfil.urls')),
+    path('pedido', include('pedido.urls')),
 ]
 debug_toolbar_urls()
 
