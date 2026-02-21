@@ -8,7 +8,7 @@ class Produto(models.Model):
     nome = models.CharField(max_length=255)
     descricao_curta = models.TextField(max_length=255)
     descricao_longa = models.TextField()
-    imagem = models.ImageField(("Imagem"), upload_to='media/produto_imagens', blank=True)
+    imagem = models.ImageField(upload_to='media/produto_imagens', blank=True)
     slug = models.SlugField(unique=True, blank=True, null=True)
     preco_marketing = models.FloatField(default=0)
     preco_marketing_promocional = models.FloatField(default=0)
